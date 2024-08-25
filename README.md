@@ -1,5 +1,13 @@
 # React + Vite
 
+## Deploying to Azure Static Web Apps
+
+This is the Vite documentation on how to deploy to 
+[Azure Static Web Apps](https://vitejs.dev/guide/static-deploy.html#azure-static-web-apps)
+
+Find the [app](https://yellow-water-006b8980f.5.azurestaticapps.net/) here.
+
+## Provide by create vite@latest
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
