@@ -7,6 +7,10 @@ This is the Vite documentation on how to deploy to
 
 Find the [app](https://yellow-water-006b8980f.5.azurestaticapps.net/) here.
 
+## Tic-Tac-Toe tutorial
+
+[Tutorial](https://react.dev/learn/tutorial-tic-tac-toe#adding-time-travel)
+
 ## Provide by create vite@latest
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
