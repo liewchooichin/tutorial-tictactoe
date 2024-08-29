@@ -1,15 +1,18 @@
 import reactLogo from '../assets/react.svg'
+import Image from 'react-bootstrap/Image'
 
-function Profile() {
+
+export function Profile() {
     return (
-      <img
+      <Image 
         src={reactLogo}
         alt="React Log"
+        thumbnail
       />
     );
 }
   
-export default function Gallery() {
+export function Gallery() {
     return (
         <section>
         <h1>Mind boggling React</h1>
