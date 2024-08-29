@@ -1,5 +1,36 @@
 # React + Vite
 
+## Using Issues
+
+Create Issues and create a development branch from the Issues.
+
+```
+git fetch origin
+git checkout 1-your-first-component
+```
+
+## Using **react-bootstrap**
+
+Comment out the original default css file in **main.jsx** and **App.jsx**.
+
+```
+npm install bootstrap
+```
+
+The [**Broswer globals**](https://react-bootstrap.netlify.app/docs/getting-started/introduction) is included in the **index.html**.
+
+
+Include this **css** in the **index.html**.
+```
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+```
+
+
 ## Deploying to Azure Static Web Apps
 
 This is the Vite documentation on how to deploy to 
