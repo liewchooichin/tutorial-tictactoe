@@ -4,18 +4,20 @@ import Image from 'react-bootstrap/Image'
 
 export function Profile() {
     return (
+      <>
       <Image 
-        src={reactLogo}
-        alt="React Log"
+        src="https://i.imgur.com/yXOvdOSs.jpg" 
+        alt="Hedy Lamarr"
         thumbnail
       />
+      </>
     );
 }
   
 export function Gallery() {
     return (
         <section>
-        <h1>Mind boggling React</h1>
+        <h1>Hedy Lamarr's Gallery</h1>
         <Profile />
         <Profile />
         <Profile />

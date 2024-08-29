@@ -6,7 +6,9 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
-import { Gallery } from './components/Gallery'
+import { Profile, Gallery } from './components/Gallery'
+import { TodoList } from './components/TodoList'
+
 
 function App() {
 
@@ -23,7 +25,8 @@ function App() {
         count is {count}
       </Button>  
 
-      <Gallery></Gallery>
+      <TodoList></TodoList>
+
 
     </Container>
   );
