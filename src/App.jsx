@@ -25,6 +25,7 @@ function App() {
         count is {count}
       </Button>  
 
+      <Gallery></Gallery>
       <TodoList1></TodoList1>
       <TodoList2></TodoList2>
 
