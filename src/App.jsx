@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 import { Gallery } from './components/Gallery'
 import { TodoList1, TodoList2 } from './components/TodoList'
-
+import { PackingList } from './components/PackingList'
 
 function App() {
 
@@ -25,6 +25,7 @@ function App() {
         count is {count}
       </Button>  
 
+      <PackingList></PackingList>
       <Gallery></Gallery>
       <TodoList1></TodoList1>
       <TodoList2></TodoList2>
