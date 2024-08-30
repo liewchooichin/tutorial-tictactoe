@@ -23,18 +23,28 @@ export function Avatar({person, size=100}){
   );
 }
 
+
 ProfileCard.propTypes = {
-  person: PropTypes.object.isRequired,
-  size: PropTypes.number
+  personName: PropTypes.object.isRequired,
+  imageId: PropTypes.string.isRequired,
+  size: PropTypes.number,
+  profession: PropTypes.string,
+  awards: PropTypes.array,
+  discovery: PropTypes.string
 }
-export function ProfileCard({person, size=70}){
+//Awards {awards.length}: {awards.join(", ")} <br/>
+export function ProfileCard({imageId, personName, size=70,
+  profession, awards, discovery}){
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={getImageUrl(person)} />
+      <Card.Img variant="top" src={getImageUrl(imageId)} />
       <Card.Body>
-        <Card.Title>{person.name}</Card.Title>
+        <Card.Title>{personName}</Card.Title>
         <Card.Text>
-          Size of image={size}.
+          Profession: {profession}<br/>
+          Awards {awards}<br/>
+          <i>Problems using array in components</i><br/>
+          Discover: {discovery}
         </Card.Text>
         <Button variant="primary">More info</Button>
       </Card.Body>
@@ -45,14 +55,21 @@ export function ProfileCard({person, size=70}){
 Profile.propTypes = {
   name: PropTypes.string.isRequired,
   imageId: PropTypes.string.isRequired,
-  size: PropTypes.number
+  size: PropTypes.number,
+  profession: PropTypes.string,
+  awards: PropTypes.object,
+  discovery: PropTypes.string
 }
-export function Profile({name, imageId, size=100}) {
+export function Profile({name, imageId, size=70,
+  profession, awards, discovery}) {
   // Using JavaScript variables with {}
   return (
     <ProfileCard
       person={{name:name, imageId:imageId}}
       size={size}
+      profession={profession}
+      awards={[awards]}
+      discovery={discovery}
     >
     </ProfileCard>
   );
@@ -64,9 +81,31 @@ export function Gallery() {
   return (
       <section>
       <h1>{galleryName}</h1>
-      <Profile name='Lin Lanying' imageId='1bX5QH6' size={100} />
-      <Profile name='Aklilu Lemma' imageId='OKS67lh' size={80} />
-      <Profile name='Katsuko Saruhashi' imageId='YfeOqp2' size={50} />
+      <ProfileCard name='Lin Lanying' imageId='1bX5QH6' size={100} />
+      <ProfileCard name='Aklilu Lemma' imageId='OKS67lh' size={80} />
+      <ProfileCard name='Katsuko Saruhashi' imageId='YfeOqp2' size={50} />
+      <ProfileCard
+        imageId="szV5sdG" personName="Maria Skłodowska-Curie"
+        profession="physicist and chemist"
+        discovery="polonium (chemical element)"
+        awards={[
+          'Nobel Prize in Physics',
+          'Nobel Prize in Chemistry',
+          'Davy Medal',
+          'Matteucci Medal'
+        ]}
+      />
+      <ProfileCard
+        imageId='YfeOqp2'
+        personName='Katsuko Saruhashi'
+        profession='geochemist'
+        discovery="a method for measuring carbon dioxide in seawater"
+        awards={[
+          "Miyake Prize for geochemistry",
+          "Tanaka Prize"
+        ]}
+
+      />
       </section>
   );
 }
