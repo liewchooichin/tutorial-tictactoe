@@ -5,87 +5,54 @@ import Button from 'react-bootstrap/Button'
 import PropTypes from 'prop-types'
 import { getImageUrl } from '../utilities/utils'
 
-Avatar.propTypes = {
-  person: PropTypes.object.isRequired,
+Profile.propTypes = {
   name: PropTypes.string.isRequired,
   imageId: PropTypes.string.isRequired,
-  size: PropTypes.number
-}
-
-export function Avatar({person, size=100}){
-  return(
-    <Image
-      src={getImageUrl(person)}
-      alt={person.name}
-      width={size}
-      height={size}
-    ></Image>
-  );
-}
-
-
-ProfileCard.propTypes = {
-  personName: PropTypes.object.isRequired,
-  imageId: PropTypes.string.isRequired,
-  size: PropTypes.number,
+  imageSize: PropTypes.number,
   profession: PropTypes.string,
   awards: PropTypes.array,
   discovery: PropTypes.string
 }
-//Awards {awards.length}: {awards.join(", ")} <br/>
-export function ProfileCard({imageId, personName, size=70,
-  profession, awards, discovery}){
+function Profile({
+  imageId,
+  name,
+  profession,
+  awards,
+  discovery,
+  imageSize = 70
+}) {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={getImageUrl(imageId)} />
-      <Card.Body>
-        <Card.Title>{personName}</Card.Title>
-        <Card.Text>
-          Profession: {profession}<br/>
-          Awards {awards}<br/>
-          <i>Problems using array in components</i><br/>
-          Discover: {discovery}
-        </Card.Text>
-        <Button variant="primary">More info</Button>
-      </Card.Body>
-    </Card>
+    <section className="profile">
+      <h2>{name}</h2>
+      <img
+        className="avatar"
+        src={getImageUrl(imageId)}
+        alt={name}
+        width={imageSize}
+        height={imageSize}
+      />
+      <ul>
+        <li><b>Profession:</b> {profession}</li>
+        <li>
+          <b>Awards: {awards.length} </b>
+          ({awards.join(', ')})
+        </li>
+        <li>
+          <b>Discovered: </b>
+          {discovery}
+        </li>
+      </ul>
+    </section>
   );
 }
 
-Profile.propTypes = {
-  name: PropTypes.string.isRequired,
-  imageId: PropTypes.string.isRequired,
-  size: PropTypes.number,
-  profession: PropTypes.string,
-  awards: PropTypes.object,
-  discovery: PropTypes.string
-}
-export function Profile({name, imageId, size=70,
-  profession, awards, discovery}) {
-  // Using JavaScript variables with {}
-  return (
-    <ProfileCard
-      person={{name:name, imageId:imageId}}
-      size={size}
-      profession={profession}
-      awards={[awards]}
-      discovery={discovery}
-    >
-    </ProfileCard>
-  );
-}
-  
 export function Gallery() {
-  const galleryName = "A Gallery";
-
   return (
-      <section>
-      <h1>{galleryName}</h1>
-      <ProfileCard name='Lin Lanying' imageId='1bX5QH6' size={100} />
-      <ProfileCard name='Aklilu Lemma' imageId='OKS67lh' size={80} />
-      <ProfileCard name='Katsuko Saruhashi' imageId='YfeOqp2' size={50} />
-      <ProfileCard
-        imageId="szV5sdG" personName="Maria Skłodowska-Curie"
+    <div>
+      <h1>Notable Scientists</h1>
+      <Profile
+        imageId="szV5sdG"
+        name="Maria Skłodowska-Curie"
         profession="physicist and chemist"
         discovery="polonium (chemical element)"
         awards={[
@@ -95,17 +62,16 @@ export function Gallery() {
           'Matteucci Medal'
         ]}
       />
-      <ProfileCard
+      <Profile
         imageId='YfeOqp2'
-        personName='Katsuko Saruhashi'
+        name='Katsuko Saruhashi'
         profession='geochemist'
         discovery="a method for measuring carbon dioxide in seawater"
         awards={[
-          "Miyake Prize for geochemistry",
-          "Tanaka Prize"
+          'Miyake Prize for geochemistry',
+          'Tanaka Prize'
         ]}
-
       />
-      </section>
+    </div>
   );
 }
