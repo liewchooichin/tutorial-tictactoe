@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 import { Profile, Gallery } from './components/Gallery'
-import { TodoList } from './components/TodoList'
+import { TodoList1, TodoList2 } from './components/TodoList'
 
 
 function App() {
@@ -25,7 +25,8 @@ function App() {
         count is {count}
       </Button>  
 
-      <TodoList></TodoList>
+      <TodoList1></TodoList1>
+      <TodoList2></TodoList2>
 
 
     </Container>
