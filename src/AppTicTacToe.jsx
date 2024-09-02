@@ -4,8 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { TicTacToeApp } from './components/TicTacToeApp'
 import { JsonApp } from './components/JsonApp'
-import { PackingList } from './components/PackingList'
-
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,7 +25,7 @@ function App() {
         </button>
       </div>
 
-      <PackingList></PackingList>      
+      <TicTacToeApp></TicTacToeApp>      
       <JsonApp></JsonApp>
       
     </>

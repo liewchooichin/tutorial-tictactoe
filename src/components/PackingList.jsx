@@ -95,7 +95,7 @@ function Drink({ name }) {
       age = '1,000+ years';    
     }
     return (
-      <section>
+      <div>
         <h1>{ name.toUpperCase() }</h1>
   
         <dl>
@@ -107,7 +107,7 @@ function Drink({ name }) {
           <dd>{ age }</dd>
         </dl>
     
-      </section>
+      </div>
     );
   }
 

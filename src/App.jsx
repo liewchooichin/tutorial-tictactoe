@@ -9,6 +9,8 @@ import Image from 'react-bootstrap/Image'
 import { Gallery } from './components/Gallery'
 import { TodoList1, TodoList2 } from './components/TodoList'
 import { PackingList } from './components/PackingList'
+import { ChemistsList } from './components/ArrayExample'
+import { MoreThanOneDomWithFragment } from './components/ArrayExample'
 
 function App() {
 
@@ -25,11 +27,8 @@ function App() {
         count is {count}
       </Button>  
 
-      <PackingList></PackingList>
-      <Gallery></Gallery>
-      <TodoList1></TodoList1>
-      <TodoList2></TodoList2>
-
+      <MoreThanOneDomWithFragment></MoreThanOneDomWithFragment>
+      <ChemistsList></ChemistsList>
 
     </Container>
   );
