@@ -18,7 +18,7 @@ import { TeaGathering } from './components/PureFunctionTeaRecipe'
 import { Clock } from './components/PureFunctionClock'
 import { GalleryCollapseProfile } from './components/CollapseProfile'
 import { Gallery } from './components/Gallery_v2'
-
+import { QuotationApp } from './QuotationApp/QuotationApp'
 
 function App() {
 
@@ -28,6 +28,9 @@ function App() {
     <Container>
      
       <h1>Learn React</h1>
+
+
+      <QuotationApp></QuotationApp>
 
       <Button variant="primary"
         onClick={() => setCount((count) => count + 1)}
