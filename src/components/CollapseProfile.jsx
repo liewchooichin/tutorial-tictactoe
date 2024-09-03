@@ -4,10 +4,10 @@ import Collapse from 'react-bootstrap/Collapse';
 import Card from 'react-bootstrap/Card';
 import { getImageUrl } from '../utilities/utils';
 import { ProfileCard } from './Gallery_v2';
-import { propTypes } from 'react-bootstrap/esm/Image';
+import PropTypes from 'prop-types';
 
 CollapseProfile.propTypes = {
-    person: propTypes.object
+    person: PropTypes.object
 } 
 function CollapseProfile({person}) {
   const [open, setOpen] = useState(false);
