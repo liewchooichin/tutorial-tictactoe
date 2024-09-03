@@ -11,6 +11,9 @@ import { TodoList1, TodoList2 } from './components/TodoList'
 import { PackingList } from './components/PackingList'
 import { ChemistsList } from './components/ArrayExample'
 import { MoreThanOneDomWithFragment } from './components/ArrayExample'
+import { RecipeList } from './components/RecipeList'
+import { Poem } from './components/LineSeparator'
+
 
 function App() {
 
@@ -27,8 +30,11 @@ function App() {
         count is {count}
       </Button>  
 
+      <Poem></Poem>
+      <RecipeList></RecipeList>
       <MoreThanOneDomWithFragment></MoreThanOneDomWithFragment>
       <ChemistsList></ChemistsList>
+
 
     </Container>
   );
