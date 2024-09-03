@@ -30,16 +30,23 @@ function Recipe({ person=1 }) {
  * When array is used, specifies the key
  */
 Cup.propTypes = {
+    guest_id: PropTypes.string,
     guest:PropTypes.number
 }
-  function Cup({guest}){
-    return (<h2>Tea cup for guest #{guest}</h2>);
+  function Cup({guest_id, guest}){
+    return (<h2>Tea cup for guest #{guest}, id: ({guest_id})</h2>);
   }
 
+  function getRandomString(max) {
+    return Math.floor(Math.random() * max).toString();
+  }
   export function TeaGathering(){
     const cups = [];
+    let guest_id = "";
     cups.push(<h2>Tea gathering</h2>)
-    for(let i=0; i<=7; i++)
-        cups.push(<Cup key={i} guest={i} />);
+    for(let i=0; i<=7; i++){
+        guest_id = getRandomString(10001);
+        cups.push(<Cup key={i}  guest_id={guest_id} guest={i} />);
+    }
     return (cups);
   }
