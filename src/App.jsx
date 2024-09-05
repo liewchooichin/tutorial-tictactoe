@@ -33,12 +33,18 @@ import { SculptureGallery } from './components/Chap2State1'
 import { SculptureGallery2 } from './components/Chap2State2'
 import { FormName } from './components/Chap2State3'
 import { FeedbackForm } from './components/Chap2State3'
+import { TrafficLight } from './components/Chap2State4'
+
 
 function App() {
 
   return (
     <Container>
     <h1 style={{marginBottom:"1em"}}>Learn React: Chapter 2</h1>
+
+    <h2>Using state: Traffic Light</h2>
+    <div style={{marginBottom:"1em"}}><TrafficLight>
+      </TrafficLight></div>
 
     <h2>Using state: Feedback Form</h2>
     <div style={{marginBottom:"1em"}}><FeedbackForm>
