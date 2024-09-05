@@ -34,6 +34,8 @@ import { SculptureGallery2 } from './components/Chap2State2'
 import { FormName } from './components/Chap2State3'
 import { FeedbackForm } from './components/Chap2State3'
 import { TrafficLight } from './components/Chap2State4'
+import { CalculateFinalState } from './components/Chap2State5'
+
 
 
 function App() {
@@ -41,6 +43,11 @@ function App() {
   return (
     <Container>
     <h1 style={{marginBottom:"1em"}}>Learn React: Chapter 2</h1>
+
+    <h2>Using state: Calculate Final State</h2>
+    <div style={{marginBottom:"1em"}}><CalculateFinalState>
+      </CalculateFinalState></div>
+
 
     <h2>Using state: Traffic Light</h2>
     <div style={{marginBottom:"1em"}}><TrafficLight>
