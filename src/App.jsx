@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 
+/* Tutorial: Chapter 1 
 import { TodoList1, TodoList2 } from './components/TodoList'
 import { PackingList } from './components/PackingList'
 import { ChemistsList } from './components/ArrayExample'
@@ -19,34 +20,56 @@ import { Clock } from './components/PureFunctionClock'
 import { GalleryCollapseProfile } from './components/CollapseProfile'
 import { Gallery } from './components/Gallery_v2'
 import { QuotationApp } from './QuotationApp/QuotationApp'
+*/
+
+
+/* Tutorial: Chapter 2 */
+import { Toolbar1 } from './components/Chap2EventHandler'
+import { Toolbar2 } from './components/Chap2EventHandler'
+import { Toolbar3 } from './components/Chap2EventHandler2'
+import { Toolbar4 } from './components/Chap2EventPropagation'
+import { ToggleColor } from './components/Chap2EventPropagation2'
+import { SculptureGallery } from './components/Chap2State1'
+import { SculptureGallery2 } from './components/Chap2State2'
+import { FormName } from './components/Chap2State3'
+import { FeedbackForm } from './components/Chap2State3'
 
 function App() {
 
-  const [count, setCount] = useState(0)
-
   return (
     <Container>
-     
-      <h1>Learn React</h1>
+    <h1 style={{marginBottom:"1em"}}>Learn React: Chapter 2</h1>
 
+    <h2>Using state: Feedback Form</h2>
+    <div style={{marginBottom:"1em"}}><FeedbackForm>
+      </FeedbackForm></div>
 
-      <QuotationApp></QuotationApp>
+    <h2>Using state: Name Form</h2>
+    <div style={{marginBottom:"1em"}}><FormName>
+      </FormName></div>
 
-      <Button variant="primary"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        count is {count}
-      </Button>  
+    <h2>Using state: Sculpture Gallery 2</h2>
+    <div style={{marginBottom:"1em"}}><SculptureGallery2>
+      </SculptureGallery2></div>
 
-      <GalleryCollapseProfile></GalleryCollapseProfile>
-      <Clock></Clock>
-      <TeaGathering></TeaGathering>
-      <CupsOfTea></CupsOfTea>
-      <Poem></Poem>
-      <RecipeList></RecipeList>
-      <MoreThanOneDomWithFragment></MoreThanOneDomWithFragment>
-      <ChemistsList></ChemistsList>
+    <h2>Using state: Sculpture Gallery 1</h2>
+    <div style={{marginBottom:"1em"}}><SculptureGallery>
+      </SculptureGallery></div>
 
+    <h2>More event propgation</h2>
+    <div style={{marginBottom:"1em"}}><ToggleColor></ToggleColor></div>
+
+    <h2>Event propagation</h2>
+    <div style={{marginBottom:"1em"}}><Toolbar4></Toolbar4></div>
+
+    <h2>Calling events from a top app</h2>
+    <div style={{marginBottom:"1em"}}><Toolbar3></Toolbar3></div>
+    
+    <h2>Calling a Button to handle all events</h2>
+    <div style={{marginBottom:"1em"}}><Toolbar2></Toolbar2></div>
+
+    <h2>Event handling basic</h2>
+    <div style={{marginBottom:"1em"}}><Toolbar1></Toolbar1></div>
 
     </Container>
   );
