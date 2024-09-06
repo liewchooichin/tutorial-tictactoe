@@ -35,7 +35,7 @@ import { FormName } from './components/Chap2State3'
 import { FeedbackForm } from './components/Chap2State3'
 import { TrafficLight } from './components/Chap2State4'
 import { CalculateFinalState } from './components/Chap2State5'
-
+import { MovingDot } from './components/Chap2State6Object'
 
 
 function App() {
@@ -44,7 +44,13 @@ function App() {
     <Container>
     <h1 style={{marginBottom:"1em"}}>Learn React: Chapter 2</h1>
 
+    <h2>Using state: Treat objects as immutable</h2>
+    <div style={{marginBottom:"1em"}}><MovingDot>
+      </MovingDot></div>
+
+
     <h2>Using state: Calculate Final State</h2>
+    <p>The dot will move along with the mouse pointer.</p>
     <div style={{marginBottom:"1em"}}><CalculateFinalState>
       </CalculateFinalState></div>
 
