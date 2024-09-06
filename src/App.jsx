@@ -36,6 +36,10 @@ import { FeedbackForm } from './components/Chap2State3'
 import { TrafficLight } from './components/Chap2State4'
 import { CalculateFinalState } from './components/Chap2State5'
 import { MovingDot } from './components/Chap2State6Object'
+import { NameForm } from './components/Chap2State7Form'
+import { NameForm2 } from './components/Chap2State7Form_SquareBrackets'
+import { ScoreForm } from './components/Chap2State7Form_SquareBrackets'
+import { MovingBox } from './components/Chap2State8MovingBox'
 
 
 function App() {
@@ -43,6 +47,22 @@ function App() {
   return (
     <Container>
     <h1 style={{marginBottom:"1em"}}>Learn React: Chapter 2</h1>
+
+    <h2>Using state: Moving boxes (setting states of objects)</h2>
+    <div style={{marginBottom:"1em"}}><MovingBox>
+      </MovingBox></div>
+
+    <h2>Using state: Using counter</h2>
+    <div style={{marginBottom:"1em"}}><ScoreForm>
+      </ScoreForm></div>
+
+    <h2>Using state: With ...syntax and [name]:value</h2>
+    <div style={{marginBottom:"1em"}}><NameForm2>
+      </NameForm2></div>
+
+    <h2>Using state: Copying objects with the spread syntax</h2>
+    <div style={{marginBottom:"1em"}}><NameForm>
+      </NameForm></div>
 
     <h2>Using state: Treat objects as immutable</h2>
     <div style={{marginBottom:"1em"}}><MovingDot>
