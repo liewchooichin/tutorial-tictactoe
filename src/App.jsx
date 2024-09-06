@@ -24,19 +24,12 @@ import { QuotationApp } from './QuotationApp/QuotationApp'
 
 
 /* Tutorial: Chapter 2 */
-import { Toolbar1 } from './components/Chap2EventHandler'
-import { Toolbar2 } from './components/Chap2EventHandler'
-import { Toolbar3 } from './components/Chap2EventHandler2'
-import { Toolbar4 } from './components/Chap2EventPropagation'
-import { ToggleColor } from './components/Chap2EventPropagation2'
-import { SculptureGallery } from './components/Chap2State1'
-import { SculptureGallery2 } from './components/Chap2State2'
-import { FormName } from './components/Chap2State3'
-import { FeedbackForm } from './components/Chap2State3'
-import { TrafficLight } from './components/Chap2State4'
-import { CalculateFinalState } from './components/Chap2State5'
-
-
+import { ListOfNames } from './components/Chap2StateArray1'
+import { CounterList } from './components/Chap2StateArray2'
+import { InsertNewItemIntoList } from './components/Chap2StateArray3'
+import { BucketList } from './components/Chap2StateArray4'
+import { ShoppingCart } from './components/Chap2StateArray5'
+import { TodoApp } from './components/Chap2StateArray6'
 
 function App() {
 
@@ -44,45 +37,29 @@ function App() {
     <Container>
     <h1 style={{marginBottom:"1em"}}>Learn React: Chapter 2</h1>
 
-    <h2>Using state: Calculate Final State</h2>
-    <div style={{marginBottom:"1em"}}><CalculateFinalState>
-      </CalculateFinalState></div>
+    <h2>Array: changing objects inside an array</h2>
+    <div style={{marginBottom:"1em"}}><TodoApp>
+      </TodoApp></div>
 
+    <h2>Array: changing objects inside an array</h2>
+    <div style={{marginBottom:"1em"}}><ShoppingCart>
+      </ShoppingCart></div>
 
-    <h2>Using state: Traffic Light</h2>
-    <div style={{marginBottom:"1em"}}><TrafficLight>
-      </TrafficLight></div>
+    <h2>Array: changing objects inside an array</h2>
+    <div style={{marginBottom:"1em"}}><BucketList>
+      </BucketList></div>
 
-    <h2>Using state: Feedback Form</h2>
-    <div style={{marginBottom:"1em"}}><FeedbackForm>
-      </FeedbackForm></div>
+    <h2>Array: insert new item into an array</h2>
+    <div style={{marginBottom:"1em"}}><InsertNewItemIntoList>
+      </InsertNewItemIntoList></div>
 
-    <h2>Using state: Name Form</h2>
-    <div style={{marginBottom:"1em"}}><FormName>
-      </FormName></div>
+    <h2>Array: counters on an array</h2>
+    <div style={{marginBottom:"1em"}}><CounterList>
+      </CounterList></div>
 
-    <h2>Using state: Sculpture Gallery 2</h2>
-    <div style={{marginBottom:"1em"}}><SculptureGallery2>
-      </SculptureGallery2></div>
-
-    <h2>Using state: Sculpture Gallery 1</h2>
-    <div style={{marginBottom:"1em"}}><SculptureGallery>
-      </SculptureGallery></div>
-
-    <h2>More event propgation</h2>
-    <div style={{marginBottom:"1em"}}><ToggleColor></ToggleColor></div>
-
-    <h2>Event propagation</h2>
-    <div style={{marginBottom:"1em"}}><Toolbar4></Toolbar4></div>
-
-    <h2>Calling events from a top app</h2>
-    <div style={{marginBottom:"1em"}}><Toolbar3></Toolbar3></div>
-    
-    <h2>Calling a Button to handle all events</h2>
-    <div style={{marginBottom:"1em"}}><Toolbar2></Toolbar2></div>
-
-    <h2>Event handling basic</h2>
-    <div style={{marginBottom:"1em"}}><Toolbar1></Toolbar1></div>
+    <h2>Array: setting new names to the list</h2>
+    <div style={{marginBottom:"1em"}}><ListOfNames>
+      </ListOfNames></div>
 
     </Container>
   );
