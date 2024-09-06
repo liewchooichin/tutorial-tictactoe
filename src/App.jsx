@@ -28,12 +28,22 @@ import { ListOfNames } from './components/Chap2StateArray1'
 import { CounterList } from './components/Chap2StateArray2'
 import { InsertNewItemIntoList } from './components/Chap2StateArray3'
 import { BucketList } from './components/Chap2StateArray4'
+import { ShoppingCart } from './components/Chap2StateArray5'
+import { TodoApp } from './components/Chap2StateArray6'
 
 function App() {
 
   return (
     <Container>
     <h1 style={{marginBottom:"1em"}}>Learn React: Chapter 2</h1>
+
+    <h2>Array: changing objects inside an array</h2>
+    <div style={{marginBottom:"1em"}}><TodoApp>
+      </TodoApp></div>
+
+    <h2>Array: changing objects inside an array</h2>
+    <div style={{marginBottom:"1em"}}><ShoppingCart>
+      </ShoppingCart></div>
 
     <h2>Array: changing objects inside an array</h2>
     <div style={{marginBottom:"1em"}}><BucketList>
