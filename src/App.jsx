@@ -3,11 +3,8 @@ import viteLogo from '/vite.svg'
 //import './App.css'
 import Container from 'react-bootstrap/Container'
 
-/* Tutorial: Chapter 3 */
-import { ListAllStatus } from "./components/Chap3Statuses"
-import { FormWater } from './components/Chap3FormWater'
-import { BackgroundPicture } from './components/Chap3BackgroundPicture'
-import { FieldEditor } from './components/Chap3FieldEditor'
+/* Tutorial: Chapter 3-2 */
+import { FeedbackForm } from './components/Chap32SendingStatus';
 
 function App() {
 
@@ -15,31 +12,17 @@ function App() {
     <Container>
     <h1 style={{marginBottom:"1em"}}>Chapter 3: Managing States</h1>
 
-    <h2>Field name editor</h2>
-    <p>The field is enabled or disabled, the text in the button 
-      changed according to the state.
+    <h2>The sending and isSending status will update the form.</h2>
+    <p>Somehow, when the the button type="submit", the handler will
+      not work properly. But, when the button is changed to type="button"
+      and onClick is set, then the form will work properly.
     </p>
     <div style={{marginBottom:"2em"}}>
-      <FieldEditor></FieldEditor>
-    </div>
-
-    <h2>Activating background or border of picture</h2>
-    <p>Clicking on the background or the picture will change the appearance of the element.
-    </p>
-    <div style={{marginBottom:"2em"}}>
-      <BackgroundPicture></BackgroundPicture>
+      <FeedbackForm></FeedbackForm>
     </div>
 
 
-    <h2>Actual form with the event handler</h2>
-    <div style={{marginBottom:"2em"}}>
-      <FormWater></FormWater>
-    </div>
 
-   <h2>Event handlers and states</h2>
-    <div style={{marginBottom:"2em"}}>
-      <ListAllStatus></ListAllStatus>
-    </div>
     </Container>
   );
 }
