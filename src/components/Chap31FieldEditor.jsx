@@ -36,18 +36,6 @@ function TextField({label, fieldId, initialValue,
     )
 }
 
-function MakeButtonField({btnName, onClickHandler}){
-    return(
-        <Button
-        variant="primary"
-        id={btnName}
-        name={btnName}
-        type="button"                    
-        onClick={e => onClickHandler(e)}
-        ></Button>
-    )
-}
-
 export function FieldEditor(){
 
     const [firstName, setFirstName] = useState("");
