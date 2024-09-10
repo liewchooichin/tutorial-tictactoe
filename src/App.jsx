@@ -4,9 +4,9 @@ import viteLogo from '/vite.svg'
 import Container from 'react-bootstrap/Container'
 
 /* Tutorial: Chapter 3-2 */
-import { TimeColor } from './components/Chap32ChangeTimeColor';
-import { PackingList } from './components/Chap32PackingList';
-import { StarLetter } from './components/Chap32StarLetter';
+import { FunFacts } from './components/Chap33Accordion';
+import {SyncedInputs} from './components/Chap33SyncedInputs';
+import {FilterableList} from './components/Chap33FilterSearchList';
 
 function App() {
 
@@ -14,26 +14,21 @@ function App() {
     <Container>
     <h1 style={{marginBottom:"1em"}}>Chapter 3: Managing States</h1>
 
-    <h2>Star and unstar a letter</h2>
-    <p>The row should be correctly highlighted when clicking on
-      star or unstar.<br/>
-      The row will be highlighted according to Focus(tab) or Pointer
-      Move.
-    </p>
+    <h2>Filter a search list</h2>
     <div style={{marginBottom:"2em"}}>
-      <StarLetter></StarLetter>
+      <FilterableList></FilterableList>
     </div>
 
-    <h2>Packing list</h2>
-    <p>The summary must be correct according to the item checked 
-    &#40;packed&#41;.</p>
+    <h2>Sync the inputs in the two fields</h2>
+    <p>Both fields should mirror each other.</p>
     <div style={{marginBottom:"2em"}}>
-      <PackingList></PackingList>
+      <SyncedInputs></SyncedInputs>
     </div>
 
-    <h2>Time will change color according to selection.</h2>
+    <h2>Passing states as props to child component</h2>
+    <p>The accordion should open and close correctly.</p>
     <div style={{marginBottom:"2em"}}>
-      <TimeColor></TimeColor>
+      <FunFacts></FunFacts>
     </div>
 
     </Container>
