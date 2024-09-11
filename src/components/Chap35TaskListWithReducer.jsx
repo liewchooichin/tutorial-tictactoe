@@ -3,6 +3,7 @@ import { useState, useReducer } from 'react';
 //import AddTask from './AddTask.js';
 //import TaskList from './TaskList.js';
 
+/** Add Task textbox */
 AddTask.propTypes = {
     onAddTask: PropTypes.func.isRequired
 }
@@ -46,7 +47,7 @@ function AddTask({onAddTask}) {
     }
   }
 
-
+  /**Task List */
   TaskList.propTypes = {
     tasks: PropTypes.arrayOf(
         PropTypes.shape({
@@ -71,6 +72,7 @@ function AddTask({onAddTask}) {
     );
   }
   
+  /**Individual line of tasks */
   Task.propTypes = {
     task: PropTypes.shape({
             id: PropTypes.number.isRequired,
@@ -125,8 +127,7 @@ function AddTask({onAddTask}) {
   }
 
 
-
-
+/**The task app */
 export function TaskListApp() {
   const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
 
@@ -164,7 +165,7 @@ export function TaskListApp() {
     </>
   );
 }
-
+/**Reducer for task app */
 function tasksReducer(tasks, action) {
   switch (action.type) {
     case 'added': {
@@ -194,7 +195,7 @@ function tasksReducer(tasks, action) {
     }
   }
 }
-
+/**Initial value */
 let nextId = 3;
 const initialTasks = [
   {id: 0, text: 'Visit Kafka Museum', done: true},
