@@ -13,6 +13,9 @@ function App() {
     <Container>
 
     <h2>Messenger App using useReducer</h2>
+    <p>The draft message will be saved while switching between different
+      contacts.
+    </p>
     <div style={{marginBottom:"2em"}}>
       <MessengerApp></MessengerApp>
     </div>

@@ -12,13 +12,15 @@ ContactList.propTypes = {
 
 }
 export function ContactList({contacts, selectedId, dispatch}) {
+    // debug
+    console.log(`In ContactList: selectedId ${selectedId}`);
     /**Dispatch */
-    function handleContactClick(e, contactId){
+    function handleContactClick(e, newContactId){
         console.log(`Contact ${e.target.name} ${e.type}`);
-        console.log(`Selected id: ${contactId}`)
+        console.log(`Selected id: ${newContactId}`)
         dispatch({
             type: "changed_selection",
-            newContactId: contactId
+            newContactId: newContactId,
         })
     }
     return (
