@@ -83,8 +83,21 @@ function AddTask({onAddTask}) {
     onDelete: PropTypes.func.isRequired
   }
   function Task({task, onChange, onDelete}) {
-    const [isEditing, setIsEditing] = useState(false);
+    //const [isEditing, setIsEditing] = useState(false);
+    const [isEditing, dispatch] = useReducer(taskEditReducer, false)
+
+    /**Dispatch */
+    function handleBtnClick(e, newIsEdit){
+      console.log(`Edit button ${e.type}`);
+      dispatch({
+        type: "edit_toggle",
+        newIsEdit: newIsEdit
+
+      })
+    }
+    /**Task content */
     let taskContent;
+
     if (isEditing) {
       taskContent = (
         <>
@@ -97,14 +110,14 @@ function AddTask({onAddTask}) {
               });
             }}
           />
-          <button onClick={() => setIsEditing(false)}>Save</button>
+          <button onClick={(e) => handleBtnClick(e, false)}>Save</button>
         </>
       );
     } else {
       taskContent = (
         <>
           {task.text}
-          <button onClick={() => setIsEditing(true)}>Edit</button>
+          <button onClick={(e) => handleBtnClick(e, true)}>Edit</button>
         </>
       );
     }
@@ -125,7 +138,17 @@ function AddTask({onAddTask}) {
       </label>
     );
   }
-
+/** Individual task reducer function */
+function taskEditReducer(task, action){
+  switch (action.type){
+    case "edit_toggle":{
+      return(action.newIsEdit);
+    }
+    default:{
+      throw new Error(`Unknown type in Task Reducer: ${action.type}`)
+    }
+  }
+}
 
 /**The task app */
 export function TaskListApp() {
