@@ -19,6 +19,12 @@ switch (action.type) {
         message: action.newMessage,
     };
     }
+    case 'sent_message': {
+        return {
+            ...state,
+            message: "",
+        }
+    }
     default: {
     throw Error('Unknown action: ' + action.type);
     }
