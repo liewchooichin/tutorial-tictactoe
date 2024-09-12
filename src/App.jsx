@@ -4,26 +4,29 @@ import viteLogo from '/vite.svg'
 import Container from 'react-bootstrap/Container'
 
 /* Tutorial: Chapter 3-5 */
-import { TaskListApp } from './components/Chap35TaskListWithReducer';
-import { MessengerApp } from './components/Chap35MessengerWithReducer/Chap35MessengerWithReducer';
+import { PageApp } from './components/Chap36ContextHeading/PageApp';
+import { BlogPostApp } from './components/Chap36ContextBlogPost/BlogPostApp';
 
 function App() {
 
   return (
     <Container>
 
-    <h2>Messenger App using useReducer</h2>
-    <p>The draft message will be saved while switching between different
-      contacts.
+    <h2>Blog Post App</h2>
+    <p>Using context
     </p>
     <div style={{marginBottom:"2em"}}>
-      <MessengerApp></MessengerApp>
+      <BlogPostApp></BlogPostApp>
     </div>
 
-    <h2>Task events using useReducer</h2>
+    <h2>Page and Heading</h2>
+    <p>Using context
+    </p>
     <div style={{marginBottom:"2em"}}>
-      <TaskListApp></TaskListApp>
+      <PageApp></PageApp>
     </div>
+
+
 
     </Container>
   );
