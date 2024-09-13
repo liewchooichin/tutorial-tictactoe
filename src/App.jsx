@@ -4,40 +4,22 @@ import viteLogo from '/vite.svg'
 import Container from 'react-bootstrap/Container'
 
 /* Tutorial: Chapter 3-5 */
-import { PageApp } from './components/Chap36ContextHeading/PageApp';
-import { BlogPostApp } from './components/Chap36ContextBlogPost/BlogPostApp';
-import { PlaceImageApp } from './components/Chap36ContextImages/PlaceImageApp';
+import { TaskApp } from './components/Chap37TaskList/TaskApp';
 
 
 function App() {
 
   return (
-    <Container>
+  <Container>
 
-    <h2>Place Image App</h2>
-    <p>Using context
+    <h2>Task App</h2>
+    <p>Using reducer and context
     </p>
     <div style={{marginBottom:"2em"}}>
-      <PlaceImageApp></PlaceImageApp>
+      <TaskApp></TaskApp>
     </div>
 
-    <h2>Blog Post App</h2>
-    <p>Using context
-    </p>
-    <div style={{marginBottom:"2em"}}>
-      <BlogPostApp></BlogPostApp>
-    </div>
-
-    <h2>Page and Heading</h2>
-    <p>Using context
-    </p>
-    <div style={{marginBottom:"2em"}}>
-      <PageApp></PageApp>
-    </div>
-
-
-
-    </Container>
+  </Container>
   );
 }
 
