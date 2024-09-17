@@ -10,12 +10,22 @@ import { CatFriends }
   from './components/Chap42ScrollToElement/ScrollToElementWithMap';
 import { ScrollTodoList } 
   from './components/Chap42ScrollToLastItem/ScrollTodoList';
+import { ControlVideo } 
+  from './components/Chap42ControlVideoWithRef/ControlVideo';
+  
 
 
 function App() {
 
   return (
   <Container>
+
+    <h2>Control video</h2>
+    <p>The play and pause can be controlled by Ref.</p>
+    <div style={{marginBottom:"2em"}}>
+      <ControlVideo></ControlVideo>
+    </div>
+
 
     <h2>Scrolling to the last items</h2>
     <div style={{marginBottom:"2em"}}>
