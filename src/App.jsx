@@ -4,15 +4,7 @@ import viteLogo from '/vite.svg'
 import Container from 'react-bootstrap/Container'
 
 /* Tutorial: Chapter 3-5 */
-import { FocusTextInput } 
-  from './components/Chap42DOMWithRefs/FocusTextInput';
-import { CatFriends } 
-  from './components/Chap42ScrollToElement/ScrollToElementWithMap';
-import { ScrollTodoList } 
-  from './components/Chap42ScrollToLastItem/ScrollTodoList';
-import { ControlVideo } 
-  from './components/Chap42ControlVideoWithRef/ControlVideo';
-  
+import { VideoPlayerApp } from './components/Chap43EffectsIntroVideo/VideoPlayer';  
 
 
 function App() {
@@ -20,30 +12,10 @@ function App() {
   return (
   <Container>
 
-    <h2>Control video</h2>
-    <p>The play and pause can be controlled by Ref.</p>
+    <h2>Video player with Ref and Effect</h2>
     <div style={{marginBottom:"2em"}}>
-      <ControlVideo></ControlVideo>
+      <VideoPlayerApp></VideoPlayerApp>
     </div>
-
-
-    <h2>Scrolling to the last items</h2>
-    <div style={{marginBottom:"2em"}}>
-      <ScrollTodoList></ScrollTodoList>
-    </div>
-
-    <h2>Scrolling to an element using Ref</h2>
-    <div style={{marginBottom:"2em"}}>
-      <CatFriends></CatFriends>
-    </div>
-
-    <h2>DOM with Ref</h2>
-    <p>Using Ref DOM to manipulate the DOM.
-    </p>
-    <div style={{marginBottom:"2em"}}>
-      <FocusTextInput></FocusTextInput>
-    </div>
-
 
   </Container>
   );
