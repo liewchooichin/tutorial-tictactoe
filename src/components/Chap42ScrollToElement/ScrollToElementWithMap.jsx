@@ -39,8 +39,10 @@ export function CatFriends(){
   function getNode(cat, node){
     const map = getMap();
     if(node){
+      // Add to the Map
       map.set(cat, node);
     } else {
+      // Remove from the Map
       map.delete(cat);
     }
   }

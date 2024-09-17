@@ -8,11 +8,19 @@ import { FocusTextInput }
   from './components/Chap42DOMWithRefs/FocusTextInput';
 import { CatFriends } 
   from './components/Chap42ScrollToElement/ScrollToElementWithMap';
+import { ScrollTodoList } 
+  from './components/Chap42ScrollToLastItem/ScrollTodoList';
+
 
 function App() {
 
   return (
   <Container>
+
+    <h2>Scrolling to the last items</h2>
+    <div style={{marginBottom:"2em"}}>
+      <ScrollTodoList></ScrollTodoList>
+    </div>
 
     <h2>Scrolling to an element using Ref</h2>
     <div style={{marginBottom:"2em"}}>
