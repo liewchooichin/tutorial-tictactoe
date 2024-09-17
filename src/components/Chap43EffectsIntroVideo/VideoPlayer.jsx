@@ -2,10 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import PropTypes from "prop-types";
 
 
-/**If I use a function call, there will be 
- *  TypeError: Cannot read properties of 
- *  undefined (reading 'current')
- */
 /**Function to control play or pause */
 function controlPlayOrPause(ref, isPlaying){ 
   if(isPlaying){
@@ -23,23 +19,18 @@ VideoPlayer.propTypes = {
 function VideoPlayer({isPlaying, src}){
   const ref = useRef(null);
 
-  /** Cannot use function call. The value
-   * of Ref cannot be determined in the 
-   * function.
-   */
-/*   useEffect((ref, isPlaying)=>
-    controlPlayOrPause(ref, isPlaying))
- */
+   useEffect(()=>
+    controlPlayOrPause(ref, isPlaying)) 
 
   /**This code is working. */   
-  useEffect(() => {
+/*   useEffect(() => {
     if(isPlaying){
       ref.current.play();
     } else {
       ref.current.pause();
     }
   })
- 
+ */ 
   return(
     <video 
       ref={ref}
