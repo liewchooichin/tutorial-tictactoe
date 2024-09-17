@@ -4,28 +4,44 @@ import viteLogo from '/vite.svg'
 import Container from 'react-bootstrap/Container'
 
 /* Tutorial: Chapter 3-5 */
-import { RefIntroApp } 
-  from './components/Chap41RefIntro/RefIntroApp';
-import { StopWatchApp } 
-  from './components/Chap41RefStopWatch/StopWatchApp';
-import { ChatInputApp } 
-  from './components/Chap41FixedBrokenChatInput/ChatInputApp';
-import { DebouncingButtonApp } 
-  from './components/Chap41FixedDebouncingButtons/DebouncingButtonApp';
-import { ReadLatestStateApp } 
-  from './components/Chap41ReadTheLatestState/ReadLatestStateApp';
+import { FocusTextInput } 
+  from './components/Chap42DOMWithRefs/FocusTextInput';
+import { CatFriends } 
+  from './components/Chap42ScrollToElement/ScrollToElementWithMap';
+import { ScrollTodoList } 
+  from './components/Chap42ScrollToLastItem/ScrollTodoList';
+import { ControlVideo } 
+  from './components/Chap42ControlVideoWithRef/ControlVideo';
+  
+
 
 function App() {
 
   return (
   <Container>
 
-    <h2>Read the latest state</h2>
-    <p>The alert show the current input text rather than 
-      what it was at the time of the click.
+    <h2>Control video</h2>
+    <p>The play and pause can be controlled by Ref.</p>
+    <div style={{marginBottom:"2em"}}>
+      <ControlVideo></ControlVideo>
+    </div>
+
+
+    <h2>Scrolling to the last items</h2>
+    <div style={{marginBottom:"2em"}}>
+      <ScrollTodoList></ScrollTodoList>
+    </div>
+
+    <h2>Scrolling to an element using Ref</h2>
+    <div style={{marginBottom:"2em"}}>
+      <CatFriends></CatFriends>
+    </div>
+
+    <h2>DOM with Ref</h2>
+    <p>Using Ref DOM to manipulate the DOM.
     </p>
     <div style={{marginBottom:"2em"}}>
-      <ReadLatestStateApp></ReadLatestStateApp>
+      <FocusTextInput></FocusTextInput>
     </div>
 
 
