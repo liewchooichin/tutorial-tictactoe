@@ -3,13 +3,12 @@ import viteLogo from '/vite.svg'
 //import './App.css'
 import Container from 'react-bootstrap/Container'
 
-/* Tutorial: Chapter 3-5 */
-import { VideoPlayerApp } 
-  from './components/Chap43EffectsIntroVideo/VideoPlayer';  
-import { VideoPlayerWithDependency } 
-  from './components/Chap43EffectsIntroVideo/VideoPlayerWithDependency';
-import { ChatRoomApp } 
-  from './components/Chap43EffectsChatRoom/ChatRoomApp';
+/* Tutorial: Chapter 4-3 */
+import { UpperCaseForm } 
+  from './components/Chap43FocusFieldOnMount/FocusFieldOnMount';
+import { FixIntervalFiring } 
+  from './components/Chap43FixIntervalFiring/FixIntervalFiring';
+import { FixBioFetching } from './components/Chap43FixBioFetching/FixBioFetching';
 
 
 function App() {
@@ -17,21 +16,22 @@ function App() {
   return (
   <Container>
 
-    <h2>Chat room using Effect to connect and 
-      disconnect from server</h2>
+    <h2>Make sure the fetch is fetching the correct bio</h2>
       <p>The connection is in the console log.</p>
     <div style={{marginBottom:"2em"}}>
-      <ChatRoomApp></ChatRoomApp>
+      <FixBioFetching></FixBioFetching>
     </div>
 
-    <h2>Video player with Ref and Effect</h2>
+    <h2>Fix and interval</h2>
+      <p>The connection is in the console log.</p>
     <div style={{marginBottom:"2em"}}>
-      <VideoPlayerWithDependency></VideoPlayerWithDependency>
+      <FixIntervalFiring></FixIntervalFiring>
     </div>
 
-    <h2>Video player with Ref and Effect</h2>
+    <h2>Focus on the first input field</h2>
+      <p>The connection is in the console log.</p>
     <div style={{marginBottom:"2em"}}>
-      <VideoPlayerApp></VideoPlayerApp>
+      <UpperCaseForm></UpperCaseForm>
     </div>
 
   </Container>
