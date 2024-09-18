@@ -3,16 +3,12 @@ import viteLogo from '/vite.svg'
 //import './App.css'
 import Container from 'react-bootstrap/Container'
 
-/* Tutorial: Chapter 3-5 */
-import { FocusTextInput } 
-  from './components/Chap42DOMWithRefs/FocusTextInput';
-import { CatFriends } 
-  from './components/Chap42ScrollToElement/ScrollToElementWithMap';
-import { ScrollTodoList } 
-  from './components/Chap42ScrollToLastItem/ScrollTodoList';
-import { ControlVideo } 
-  from './components/Chap42ControlVideoWithRef/ControlVideo';
-  
+/* Tutorial: Chapter 4-3 */
+import { UpperCaseForm } 
+  from './components/Chap43FocusFieldOnMount/FocusFieldOnMount';
+import { FixIntervalFiring } 
+  from './components/Chap43FixIntervalFiring/FixIntervalFiring';
+import { FixBioFetching } from './components/Chap43FixBioFetching/FixBioFetching';
 
 
 function App() {
@@ -20,30 +16,23 @@ function App() {
   return (
   <Container>
 
-    <h2>Control video</h2>
-    <p>The play and pause can be controlled by Ref.</p>
+    <h2>Make sure the fetch is fetching the correct bio</h2>
+      <p>The connection is in the console log.</p>
     <div style={{marginBottom:"2em"}}>
-      <ControlVideo></ControlVideo>
+      <FixBioFetching></FixBioFetching>
     </div>
 
-
-    <h2>Scrolling to the last items</h2>
+    <h2>Fix and interval</h2>
+      <p>The connection is in the console log.</p>
     <div style={{marginBottom:"2em"}}>
-      <ScrollTodoList></ScrollTodoList>
+      <FixIntervalFiring></FixIntervalFiring>
     </div>
 
-    <h2>Scrolling to an element using Ref</h2>
+    <h2>Focus on the first input field</h2>
+      <p>The connection is in the console log.</p>
     <div style={{marginBottom:"2em"}}>
-      <CatFriends></CatFriends>
+      <UpperCaseForm></UpperCaseForm>
     </div>
-
-    <h2>DOM with Ref</h2>
-    <p>Using Ref DOM to manipulate the DOM.
-    </p>
-    <div style={{marginBottom:"2em"}}>
-      <FocusTextInput></FocusTextInput>
-    </div>
-
 
   </Container>
   );
