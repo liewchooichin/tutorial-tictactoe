@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import Container from 'react-bootstrap/Container'
 
 /* Tutorial: Chapter 4-4 */
-import { FilterableProductTable } from './components/Chap44FilterableProductTable/FilterableProductTable';
+import { TodosWithMemoApp } 
+  from './components/Chap44TodosWithMemo/TodosWithMemoApp';
 
 
 function App() {
@@ -12,9 +13,12 @@ function App() {
   return (
   <Container>
 
-    <h2>Filterable product table</h2>
+
+
+    <h2>useMemo for todo list</h2>
+      <p>The connection is in the console log.</p>
     <div style={{marginBottom:"2em"}}>
-      <FilterableProductTable></FilterableProductTable>
+      <TodosWithMemoApp></TodosWithMemoApp>
     </div>
 
 
