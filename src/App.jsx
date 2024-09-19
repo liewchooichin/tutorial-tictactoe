@@ -3,36 +3,26 @@ import viteLogo from '/vite.svg'
 //import './App.css'
 import Container from 'react-bootstrap/Container'
 
-/* Tutorial: Chapter 4-3 */
-import { UpperCaseForm } 
-  from './components/Chap43FocusFieldOnMount/FocusFieldOnMount';
-import { FixIntervalFiring } 
-  from './components/Chap43FixIntervalFiring/FixIntervalFiring';
-import { FixBioFetching } from './components/Chap43FixBioFetching/FixBioFetching';
-
+/* Tutorial: Chapter 4-4 */
+import { FilterableProductTable } from './components/Chap44FilterableProductTable/FilterableProductTable';
+import { ContactManager } 
+  from './components/Chap44EditContactForm/ContactManager';
 
 function App() {
 
   return (
   <Container>
 
-    <h2>Make sure the fetch is fetching the correct bio</h2>
-      <p>The connection is in the console log.</p>
+    <h2>Contact Book</h2>
     <div style={{marginBottom:"2em"}}>
-      <FixBioFetching></FixBioFetching>
+      <ContactManager></ContactManager>
     </div>
 
-    <h2>Fix and interval</h2>
-      <p>The connection is in the console log.</p>
+    <h2>Filterable product table</h2>
     <div style={{marginBottom:"2em"}}>
-      <FixIntervalFiring></FixIntervalFiring>
+      <FilterableProductTable></FilterableProductTable>
     </div>
 
-    <h2>Focus on the first input field</h2>
-      <p>The connection is in the console log.</p>
-    <div style={{marginBottom:"2em"}}>
-      <UpperCaseForm></UpperCaseForm>
-    </div>
 
   </Container>
   );
