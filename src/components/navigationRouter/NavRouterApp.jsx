@@ -3,7 +3,8 @@ import {
   Outlet,
   Routes,
   Route,
-  Link
+  Link,
+  MemoryRouter
 } from "react-router-dom";
 import { Home, About, PageNotFound } from "./Pages"
 import { Layout } from "./Layout";
@@ -14,8 +15,8 @@ import { UserDataPage } from "./Users";
 
 export function NavRouterApp(){
   return(
-    <BrowserRouter>
-
+    
+      <BrowserRouter basename="/">
         <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Home/>}></Route>
@@ -35,8 +36,8 @@ export function NavRouterApp(){
             <Route path="*" element={<PageNotFound/>}></Route>
           </Route>
         </Routes>
-
-    </BrowserRouter>
+      </BrowserRouter>
+    
   )
 }
 
