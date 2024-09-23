@@ -5,6 +5,8 @@ import {
   Link,
   Outlet,
 } from "react-router-dom";
+import { PageNotFound } from "./Pages";
+
 
 function Blog1(){
   return (<h2>Blog 1</h2>);
@@ -15,7 +17,6 @@ function Blog2(){
 function Blog3(){
   return (<h2>Blog 3</h2>);
 }
-
 
 
 export function Blogs() {
@@ -36,6 +37,7 @@ export function Blogs() {
       <Route path="/blog1" element={<Blog1/>}></Route>
       <Route path="/blog2" element={<Blog2/>}></Route>
       <Route path="/blog3" element={<Blog3/>}></Route>
+      <Route path="/*" element={<PageNotFound />}></Route>
     </Routes>
 
     </>
